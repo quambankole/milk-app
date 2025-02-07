@@ -13,22 +13,23 @@ body {
   flex-direction: row;
   justify-content: space-between;
   color: #f3f3f3;
+  background-color: #e6e3d2;
 }
 
 .formHeaderLeft {
   width: 70%;
   background-color: #020F59;
+  clip-path: polygon(0% 0%,100% 0%,85% 100%,0% 100%);
 }
 
 .formHeaderRight {
   width: 30%;
-  background-color: #01116e;
+  background-color: #e6e3d2;
   text-align: center;
   align-content: center;
 }
 
 .formBtn {
-  width: 30%;
   background-color: #00158d;
   color: #f3f3f3;
   width: 70%;
@@ -74,12 +75,8 @@ body {
   margin-bottom: 16px;
 }
 
-.formInput {
-  padding: 0.25rem;              
-  font-size: 1rem;                
-  border: 0.0625rem solid #161616;  
+.formInput { 
   background-color: #f3f3f3;
-  width: 100%;
   margin-top: 0.25rem;          
   margin-bottom: 1rem;         
   display: block;

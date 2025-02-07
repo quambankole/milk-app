@@ -1,0 +1,24 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    border-top: 2px solid rgb(255, 149, 0);
+    height: 9vh;  
+    justify-content: space-around; 
+    align-items: center;
+    background-color: black;
+}
+
+.footerItem {
+    color: white;
+    font-size: 1vw;
+    padding: 0.5vh 1vw;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.footerItem:hover {
+    background-color: rgb(255, 149, 0);
+    color: black;
+    cursor: pointer;
+}

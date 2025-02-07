@@ -1,0 +1,58 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    border: 0.2vw solid rgb(255, 149, 0);
+    background-color: black;
+    color: white;
+    height: 10vh; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2vw;
+    width: 95.8%; 
+}
+
+.logo {
+    border: 2px solid green;
+    width: 6vw;  
+    height: 7vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2vw;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    width: 50vw;  
+    height: 10vh; 
+    flex-direction: row;
+    justify-content: space-between; 
+    overflow-y: hidden;
+    align-items: center;
+    gap: 1vw; 
+}
+
+.nav div {
+    flex-grow: 1; /* ✅ Items are flexible */
+    min-width: 7vw; /* ✅ Prevents shrinking too much */
+    height: 7vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1vw;
+}
+
+.navItem {
+    padding: 0.5rem; /* ✅ Less padding */
+}
+
+.navItem:hover {
+    background-color: rgb(255, 149, 0);
+    color: black;
+    cursor: pointer;
+}
+
+.navItem:active, .navItem:visited {
+    color: white;  
+}

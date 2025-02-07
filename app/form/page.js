@@ -4,6 +4,8 @@ import { useState } from "react";
 import "./form.css";
 import { db } from "../data/firebaseConfig"; 
 import { collection, addDoc } from "firebase/firestore";
+import { useRouter } from "next/navigation";
+
 
 export default function Form() {
 const [formData, setFormData] = useState({
@@ -32,6 +34,7 @@ const [showGuardianForm, setShowGuardianForm] = useState(false);
 const [isPopupVisible, setIsPopupVisible] = useState(false);
 const [isRulesPopupVisible, setIsRulesPopupVisible] = useState(false);
 const [rulesRead, setRulesRead] = useState(false); 
+const router = useRouter();
 
 const calculateAge = (year, month, day) => {
 const dob = new Date(Number(year), Number(month) - 1, Number(day));
@@ -184,14 +187,15 @@ setFormErrors(errors);
 
 if (Object.keys(errors).length === 0) {
     try {
-    const docRef = await addDoc(collection(db, "submissions"), formData);
-    console.log("Form Submitted, Document ID: ", docRef.id);
+      const docRef = await addDoc(collection(db, "submissions"), formData);
+      console.log("Form Submitted, Document ID: ", docRef.id);
+      router.push("form/thankyou");
     } catch (error) {
-    console.error("Error adding document: ", error);
+      console.error("Error adding document: ", error);
     }
-} else {
+  } else {
     console.log("Form has errors. Please correct them.");
-}
+  }
 };
 
 return (
